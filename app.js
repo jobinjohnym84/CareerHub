@@ -25,23 +25,23 @@ app.use(require('stylus').middleware({ src: __dirname + '/app/public' }));
 app.use(express.static(__dirname + '/app/public'));
 
 // build mongo database connection url //
- process.env.DB_HOST = process.env.DB_HOST || 'localhost'
- process.env.DB_PORT = process.env.DB_PORT || 27017;
- process.env.DB_NAME = process.env.DB_NAME || 'node-login';
+//  process.env.DB_HOST = process.env.DB_HOST || 'localhost'
+//  process.env.DB_PORT = process.env.DB_PORT || 27017;
+//  process.env.DB_NAME = process.env.DB_NAME || 'node-login';
 
- if (app.get('env') != 'live'){
- 	process.env.DB_URL = 'mongodb://'+process.env.DB_HOST+':'+process.env.DB_PORT;
- }	else {
-// // prepend url with authentication credentials // 
- 	process.env.DB_URL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+process.env.DB_HOST+':'+process.env.DB_PORT;
- }
+//  if (app.get('env') != 'live'){
+//  	process.env.DB_URL = 'mongodb://'+process.env.DB_HOST+':'+process.env.DB_PORT;
+//  }	else {
+// // // prepend url with authentication credentials // 
+//  	process.env.DB_URL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+process.env.DB_HOST+':'+process.env.DB_PORT;
+//  }
 
 app.use(session({
 	secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',
 	proxy: true,
 	resave: true,
 	saveUninitialized: true,
-	store: new MongoStore({ url: process.env.DB_URL })
+
 	})
 );
 
