@@ -1,12 +1,16 @@
 {
-    "name": "azure_app",
-    "version": "1.0.0",
-    "description": "",
-    "main": "node app.js",
-    "scripts": {
-       "start": "node app.js"
-    },
-	
+  "name": "node-login",
+  "version": "1.7.0",
+  "description": "",
+  "author": "",
+  "website": {
+    "url": ""
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.1",
@@ -19,6 +23,10 @@
     "pug": "^2.0.3",
     "stylus": "^0.54.5"
   },
-    "author": "",
-    "license": "ISC"
+  "engines": {
+    "node": "10.4.0"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
+}
