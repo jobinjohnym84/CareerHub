@@ -23,9 +23,6 @@
     "pug": "^2.0.3",
     "stylus": "^0.54.5"
   },
-  "engines": {
-    "node": "10.4.0"
-  },
   "scripts": {
     "start": "node app.js"
   }
