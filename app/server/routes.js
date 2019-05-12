@@ -76,7 +76,10 @@ module.exports = function(app) {
 				name	: req.body['name'],
 				email	: req.body['email'],
 				pass	: req.body['pass'],
-				country	: req.body['country']
+				country	: req.body['country'],
+				cv	: req.body['cv'],
+				photo	: req.body['photo']
+				
 			}, function(e, o){
 				if (e){
 					res.status(400).send('error-updating-account');
@@ -102,7 +105,9 @@ module.exports = function(app) {
 			email 	: req.body['email'],
 			user 	: req.body['user'],
 			pass	: req.body['pass'],
-			country : req.body['country']
+			country : req.body['country'],
+			cv	: req.body['cv'],
+			photo	: req.body['photo']
 		}, function(e){
 			if (e){
 				res.status(400).send(e);

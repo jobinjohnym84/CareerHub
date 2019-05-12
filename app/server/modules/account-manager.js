@@ -120,7 +120,9 @@ exports.updateAccount = function(newData, callback)
 		var o = {
 			name : data.name,
 			email : data.email,
-			country : data.country
+			country : data.country,
+			cv : data.cv,
+			photo : data.photo
 		}
 		if (data.pass) o.pass = data.pass;
 		accounts.findOneAndUpdate({_id:getObjectId(data.id)}, {$set:o}, {returnOriginal : false}, callback);
